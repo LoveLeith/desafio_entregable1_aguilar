@@ -1,3 +1,5 @@
 let nombreIngresado = prompt("Ingresa tu nombre");
 
-alert("Hola + " " + nombreIngresado");
+let resultado = "Hola," + " " + nombreIngresado;
+
+alert(resultado);
