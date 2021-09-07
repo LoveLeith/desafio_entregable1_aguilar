@@ -4,12 +4,10 @@ let resultado = "Hola," + " " + nombreIngresado;
 
 alert(resultado);
 
-let anioActual = prompt("¿En qué año estamos?");
-let fechaNacimiento = prompt("¿En qué año naciste?");
+let anioActual = parseInt (prompt("¿En qué año estamos?"));
 
-let anio = parseInt(anioActual);
-let edad = parseInt(fechaNacimiento);
+let fechaNacimiento = parseInt (prompt("¿En qué año naciste?"));
 
 let restaAnios = anioActual - fechaNacimiento;
 
-alert("Tu edad es:" + " " + restaAnios);
+alert("Tenés" + " " + restaAnios + " " + "años de edad. ¡Gracias por participar!");

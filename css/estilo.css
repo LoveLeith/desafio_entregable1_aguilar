@@ -1,2 +1,10 @@
 * {
   background-color: salmon; }
+
+.tituloPagina {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+.tituloPagina h1 {
+  color: white; }
