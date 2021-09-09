@@ -62,7 +62,7 @@ else {
     alert(nombre +", o no ingresaste un monto o el monto es muy elevado");
 }
 
-/**********Tercer ejercicio Desafio 3 ***********************/
+/**********Tercer ejercicio Desafio 2 ***********************/
 
 let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
 
