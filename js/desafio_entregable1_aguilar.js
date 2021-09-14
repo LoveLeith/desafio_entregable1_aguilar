@@ -19,7 +19,7 @@
 
 /***********Primer ejercicio desafio 2 ****************/
 
-let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
+/*let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
 
 let precio = parseInt(prompt("Ingresá el precio del producto"));
 
@@ -41,7 +41,7 @@ else {
 
 /************Segundo ejercicio Desafio 2 *************/
 
-let nombre = prompt("¿Como te llamas?");
+/*let nombre = prompt("¿Como te llamas?");
 
 let monto = parseFloat(prompt("Ingresá el monto que queres pagar por un combo de RyanAir que se subasta"));
 
@@ -64,7 +64,7 @@ else {
 
 /**********Tercer ejercicio Desafio 2 ***********************/
 
-let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
+/*let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
 
 if ((palabraIngresada == "Casa") || (palabraIngresada == "casa")) {
     alert("La palabra ingresada es Casa");
@@ -80,4 +80,90 @@ else if ((palabraIngresada == "Estudio") || (palabraIngresada == "estudio")) {
 
 else {
     alert("No es ninguna de las palabras solicitadas");
+}*/
+
+/**********************Inicio Desafío CLASE 3 - CICLOS ******************/
+
+/**********************Primer Ejercicio**************************/
+
+let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
+
+while((entrada != "Milanesas") && (entrada != " ")) {
+    switch (entrada) {
+        case "Hamburguesas":
+            alert("Si, las hamburguesas son ricas, pero hay algo que me gusta mucho más");
+            break;
+        case "Pastas":
+            alert("Una pasta bien hecha hace bien al alma, pero no.");
+            break;
+        case "Ensalada":
+            alert("Una ensaladita con de todo súper rico, pero acompañado de otra cosa.");
+            break;
+        default:
+            alert("Seguí participando");
+            break;
+    }
+    entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
 }
+
+/***********************************Segundo ejercicio **********************************/
+
+let luzRoja = "Luz roja";
+let luzAmarilla = "Luz amarilla";
+let luzVerde = "Luz verde";
+
+let ingresarLuzSemaforo = parseInt(prompt("Ingresá una opción para saber cómo cruzar la calle: \n (1) Luz roja \n (2) Luz amarilla \n (3) Luz verde"))
+
+if (ingresarLuzSemaforo <=3) {
+
+    switch (ingresarLuzSemaforo) {
+        case 1:
+            alert("El semáforo está en " +luzRoja+ ", ahora no podés cruzar la calle");
+            break;
+        case 2:
+            alert("El semáforo está en " +luzAmarilla+ ", prestá atención que los autos siguen pasando");
+            break;
+        case 3:
+            alert("El semáforo está en " +luzVerde+ ", ya podés cruzar la calle");
+            break;
+    
+        default:
+            alert("No estás prestando atención");
+            break;
+    }
+}
+
+else {
+    alert("Prestá atención porque vas a volar por lo aires si te atropellan");
+    ingresarLuzSemaforo = parseInt(prompt("Ingresá una opción para saber cómo cruzar la calle: \n (1) Luz roja \n (2) Luz amarilla \n (3) Luz verde"))
+}
+
+/*******************************Tercer ejercicio ********************************/
+
+let ingresarNumero = parseInt(prompt("Ingresar numero"));
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i == 3) {
+        continue;
+    }
+    let resultado = ingresarNumero + i;
+
+    console.log(ingresarNumero +" + "+ i +" = "+ resultado);
+}
+
+/*******************************Cuarto ejercicio ********************************/
+
+for (let i = 1; i <=10; i++) {
+
+    let ingresarNombre = prompt("Ingresar nombre para participar del sorteo");
+
+    if (ingresarNombre == "Paula") {
+        continue;
+    }
+
+    console.log("Ticket No. " +i+ " Nombre: "+ingresarNombre);
+}
+
+
+
