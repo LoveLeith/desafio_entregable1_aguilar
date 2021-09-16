@@ -19,7 +19,7 @@
 
 /***********Primer ejercicio desafio 2 ****************/
 
-/*let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
+let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
 
 let precio = parseInt(prompt("Ingresá el precio del producto"));
 
@@ -41,7 +41,7 @@ else {
 
 /************Segundo ejercicio Desafio 2 *************/
 
-/*let nombre = prompt("¿Como te llamas?");
+let nombre = prompt("¿Como te llamas?");
 
 let monto = parseFloat(prompt("Ingresá el monto que queres pagar por un combo de RyanAir que se subasta"));
 
@@ -64,7 +64,7 @@ else {
 
 /**********Tercer ejercicio Desafio 2 ***********************/
 
-/*let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
+let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
 
 if ((palabraIngresada == "Casa") || (palabraIngresada == "casa")) {
     alert("La palabra ingresada es Casa");
@@ -80,13 +80,13 @@ else if ((palabraIngresada == "Estudio") || (palabraIngresada == "estudio")) {
 
 else {
     alert("No es ninguna de las palabras solicitadas");
-}*/
+}
 
 /**********************Inicio Desafío CLASE 3 - CICLOS ******************/
 
 /**********************Primer Ejercicio**************************/
 
-/*let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
+let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
 
 while((entrada != "Milanesas") && (entrada != " ")) {
     switch (entrada) {
@@ -108,7 +108,7 @@ while((entrada != "Milanesas") && (entrada != " ")) {
 
 /***********************************Segundo ejercicio **********************************/
 
-/*let luzRoja = "Luz roja";
+let luzRoja = "Luz roja";
 let luzAmarilla = "Luz amarilla";
 let luzVerde = "Luz verde";
 
@@ -163,7 +163,7 @@ for (let i = 1; i <= 10; i++) {
     }
 
     console.log("Ticket No. " +i+ " Nombre: "+ingresarNombre);
-}*/
+}
 
 /****************************DESAFIO 4 FUNCIONES ******************************/
 
