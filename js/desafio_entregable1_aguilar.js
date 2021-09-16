@@ -86,7 +86,7 @@ else {
 
 /**********************Primer Ejercicio**************************/
 
-let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
+/*let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
 
 while((entrada != "Milanesas") && (entrada != " ")) {
     switch (entrada) {
@@ -108,7 +108,7 @@ while((entrada != "Milanesas") && (entrada != " ")) {
 
 /***********************************Segundo ejercicio **********************************/
 
-let luzRoja = "Luz roja";
+/*let luzRoja = "Luz roja";
 let luzAmarilla = "Luz amarilla";
 let luzVerde = "Luz verde";
 
@@ -140,7 +140,7 @@ else {
 
 /*******************************Tercer ejercicio ********************************/
 
-let ingresarNumero = parseInt(prompt("Ingresar numero"));
+/*let ingresarNumero = parseInt(prompt("Ingresar numero"));
 
 for (let i = 1; i <= 10; i++) {
 
@@ -154,7 +154,7 @@ for (let i = 1; i <= 10; i++) {
 
 /*******************************Cuarto ejercicio ********************************/
 
-for (let i = 1; i <=10; i++) {
+/*for (let i = 1; i <=10; i++) {
 
     let ingresarNombre = prompt("Ingresar nombre para participar del sorteo");
 
@@ -163,7 +163,34 @@ for (let i = 1; i <=10; i++) {
     }
 
     console.log("Ticket No. " +i+ " Nombre: "+ingresarNombre);
+}*/
+
+/****************************DESAFIO 4 FUNCIONES ******************************/
+
+const suma = (a, b) => a + b;
+const resta = (a, b) => a - b;
+const iva = x => x * 0.21;
+const multiplicar = (a, b) => a * b;
+
+let consultaPrecioProducto = prompt("Ingresa un producto para averiguar el precio final con descuento mas el envio");
+let precioCostoProducto = parseInt(prompt("Ingresa por favor el precio al costo del producto"));
+let cantidadProducto = parseInt(prompt("Ingresa cuantas unidades queres del producto:"));
+let precioDescuento = 50;
+let precioEnvio = 250;
+
+//quiero averiguar el precio al costo con iva mas el descuento
+let nuevoPrecio = resta(suma(precioCostoProducto, iva(precioCostoProducto)), precioDescuento);
+
+//quiero averiguar el precio final segun la cantidad que ingrese el usuario
+let precioCantidad = multiplicar(cantidadProducto, nuevoPrecio);
+
+//quiero averiguar el costo total de la compra mas el envio
+let precioFinalConEnvio = suma(precioCantidad, precioEnvio);
+
+function mostrar(mensaje, mensaje2) {
+    alert(mensaje, mensaje2);
 }
 
+mostrar("El precio final de " +consultaPrecioProducto+ " es: \n" +precioCantidad+ "\nEl costo de envio es: \n" + precioEnvio + "\nEl costo total con envio es: \n" +precioFinalConEnvio);
 
-
+/*******************************FIN DESAFIO 4 FUNCIONES ***************************/
