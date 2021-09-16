@@ -19,7 +19,7 @@
 
 /***********Primer ejercicio desafio 2 ****************/
 
-let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
+/*let producto = prompt("Ingresá un producto de supermercado que quieras comprar");
 
 let precio = parseInt(prompt("Ingresá el precio del producto"));
 
@@ -41,7 +41,7 @@ else {
 
 /************Segundo ejercicio Desafio 2 *************/
 
-let nombre = prompt("¿Como te llamas?");
+/*let nombre = prompt("¿Como te llamas?");
 
 let monto = parseFloat(prompt("Ingresá el monto que queres pagar por un combo de RyanAir que se subasta"));
 
@@ -64,7 +64,7 @@ else {
 
 /**********Tercer ejercicio Desafio 2 ***********************/
 
-let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
+/*let palabraIngresada = prompt("Ingresa una de estas tres palabras: Casa, Trabajo o Estudio");
 
 if ((palabraIngresada == "Casa") || (palabraIngresada == "casa")) {
     alert("La palabra ingresada es Casa");
@@ -140,7 +140,7 @@ else {
 
 /*******************************Tercer ejercicio ********************************/
 
-/*let ingresarNumero = parseInt(prompt("Ingresar numero"));
+let ingresarNumero = parseInt(prompt("Ingresar numero"));
 
 for (let i = 1; i <= 10; i++) {
 
@@ -154,7 +154,7 @@ for (let i = 1; i <= 10; i++) {
 
 /*******************************Cuarto ejercicio ********************************/
 
-/*for (let i = 1; i <=10; i++) {
+for (let i = 1; i <=10; i++) {
 
     let ingresarNombre = prompt("Ingresar nombre para participar del sorteo");
 
