@@ -86,7 +86,7 @@ else {
 
 /**********************Primer Ejercicio**************************/
 
-let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
+/*let entrada = prompt("Adiviná cuál es mi comida favorita ingresando alguna de estas opciones: \n Hamburguesas, \n Milanesas, \n Pastas, \n Ensalada");
 
 while((entrada != "Milanesas") && (entrada != " ")) {
     switch (entrada) {
@@ -108,7 +108,7 @@ while((entrada != "Milanesas") && (entrada != " ")) {
 
 /***********************************Segundo ejercicio **********************************/
 
-let luzRoja = "Luz roja";
+/*let luzRoja = "Luz roja";
 let luzAmarilla = "Luz amarilla";
 let luzVerde = "Luz verde";
 
@@ -140,7 +140,7 @@ else {
 
 /*******************************Tercer ejercicio ********************************/
 
-let ingresarNumero = parseInt(prompt("Ingresar numero"));
+/*let ingresarNumero = parseInt(prompt("Ingresar numero"));
 
 for (let i = 1; i <= 10; i++) {
 
@@ -154,7 +154,7 @@ for (let i = 1; i <= 10; i++) {
 
 /*******************************Cuarto ejercicio ********************************/
 
-for (let i = 1; i <=10; i++) {
+/*for (let i = 1; i <=10; i++) {
 
     let ingresarNombre = prompt("Ingresar nombre para participar del sorteo");
 
@@ -167,7 +167,7 @@ for (let i = 1; i <=10; i++) {
 
 /****************************DESAFIO 4 FUNCIONES ******************************/
 
-const suma = (a, b) => a + b;
+/*const suma = (a, b) => a + b;
 const resta = (a, b) => a - b;
 const iva = x => x * 0.21;
 const multiplicar = (a, b) => a * b;
@@ -192,5 +192,68 @@ function mostrar(mensaje, mensaje2) {
 }
 
 mostrar("El precio final de " +consultaPrecioProducto+ " es: \n" +precioCantidad+ "\nEl costo de envio es: \n" + precioEnvio + "\nEl costo total con envio es: \n" +precioFinalConEnvio);
-
+*/
 /*******************************FIN DESAFIO 4 FUNCIONES ***************************/
+
+
+/************************INICIO DESAFIO 5 OBJETOS **************************/
+
+class Product {
+    constructor (id, name, price, deliveryPrice) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.deliveryPrice = deliveryPrice;
+        
+    }
+    addVAT() {
+        this.price = this.price * 0.21 + this.price;
+    }
+    discount(value) {
+        this.price -= value
+    }
+    addDelivery() {
+        this.price = this.price + this.deliveryPrice;
+    }
+}
+
+const product1 = new Product(1, 'Hamburguesa de carne', 200, 250);
+const product2 = new Product(2, 'Panchos', 90, 250);
+const product3 = new Product(3, 'Papas fritas', 350, 250);
+const product4 = new Product(4, 'Nuggets de pollo', 450, 250)
+
+//quiero primero mostrar el precio de costo del objeto "product1", luego sumarle el IVA y luego mostrar el precio con IVA
+console.log(product1.price);
+product1.addVAT();
+console.log(product1.price);
+//quiero hacer el descuento sobre el producto y mostrar el precio final con el descuento
+product1.discount(40);
+console.log(product1.price);
+//quiero sumarle el precio de delivery al precio final con IVA y descuento ya aplicado.
+product1.addDelivery();
+console.log(product1.price);
+
+console.log(product2.price);
+product2.addVAT();
+console.log(product2.price);
+product2.discount(10);
+console.log(product2.price);
+product2.addDelivery();
+console.log(product2.price);
+
+console.log(product3.price);
+product3.addVAT();
+console.log(product3.price);
+product3.discount(40);
+console.log(product3.price);
+product3.addDelivery();
+console.log(product3.price);
+
+console.log(product4.price);
+product4.addVAT();
+console.log(product4.price);
+product4.discount(40);
+console.log(product4.price);
+product4.addDelivery();
+console.log(product4.price);
+
