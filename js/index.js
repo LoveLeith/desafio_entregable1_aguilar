@@ -198,7 +198,7 @@ mostrar("El precio final de " +consultaPrecioProducto+ " es: \n" +precioCantidad
 
 /************************INICIO DESAFIO 5 OBJETOS **************************/
 
-class Product {
+/*class Product {
     constructor (id, name, price, deliveryPrice) {
         this.id = id;
         this.name = name;
@@ -220,7 +220,7 @@ class Product {
 const product1 = new Product(1, 'Hamburguesa de carne', 200, 250);
 const product2 = new Product(2, 'Panchos', 90, 250);
 const product3 = new Product(3, 'Papas fritas', 350, 250);
-const product4 = new Product(4, 'Nuggets de pollo', 450, 250)
+const product4 = new Product(4, 'Nuggets de pollo', 450, 250);
 
 //quiero primero mostrar el precio de costo del objeto "product1", luego sumarle el IVA y luego mostrar el precio con IVA
 console.log(product1.price);
@@ -256,4 +256,78 @@ product4.discount(40);
 console.log(product4.price);
 product4.addDelivery();
 console.log(product4.price);
+*/
 
+/***********************************INICIO CLASE 6 ARRAYS******************************************************/
+
+/*class Product {
+    constructor (id, name, price, deliveryPrice) {
+        this.id = parseInt(id);
+        this.name = name.toUpperCase();
+        this.price = parseFloat(price);
+        this.deliveryPrice = parseFloat(deliveryPrice);
+        
+    }
+    addVAT() {
+        this.price = this.price * 0.21; //+ this.price;
+    }
+    discount(value) {
+        this.price -= value;
+    }
+    addDelivery() {
+        this.price = this.price + this.deliveryPrice;
+    }
+}
+
+const products = [];
+
+products.push(new Product(1, 'Hamburguesa de carne', 200, 250));
+products.push(new Product(2, 'Panchos', 90, 250));
+products.push(new Product(3, 'Papas fritas', 350, 250));
+products.push(new Product(4, 'Nuggets de pollo', 450, 250));
+products.push(new Product(5, 'Empanadas', 800, 250));
+products.push(new Product(6, 'Croquetas de papa', 500, 250));
+
+for (const product of products) {
+    console.log(product.id);
+    console.log(product.name);
+    console.log(product.price);
+    console.log(product.deliveryPrice);
+}
+
+
+const baratos = products.filter(product=>product.price < 300);
+console.log(baratos);
+
+const caros = products.filter(product=>product.price > 95);
+console.log(caros);
+
+const precioAumentado = products.map(product=>product.price +=50);
+console.log(precioAumentado);*/
+
+/***************************PRIMERA ENTREGA PARCIAL***********************/
+/*Este archivo contiene el bucle del menu principal para que el usuario elija los productos que se muestran
+y los alert de salida para mostrar los resultados de la compra elegida */
+
+
+alert ('Bienvenidos a Teneme en casa');
+
+do {
+    let option = showMenu();
+    if(option === products.length + 1) break;
+    let qty = parseInt(prompt(selectedQty));
+
+    addToCart(option, qty);
+
+    resp = prompt('¿Querés agregar más productos al carrito? Si/No');
+
+}while(resp === "SI" || resp === "si");
+
+if(cart > 0) {
+    let vatPrice = cart * 0.21;
+    let finalPrice = vatPrice + cart;
+    let priceDelivery = finalPrice + delivery;
+    alert(`El precio de tu compra es $${cart}. El precio final más IVA es $${finalPrice}.\n El precio final con envio es $${priceDelivery}`);
+}
+
+alert('¡Gracias por tu compra! Si querés ver los aumentos de precio \ny saber cuáles son los mas baratos mirá la consola')
