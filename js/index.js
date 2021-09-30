@@ -310,7 +310,7 @@ console.log(precioAumentado);*/
 y los alert de salida para mostrar los resultados de la compra elegida */
 
 
-alert ('Bienvenidos a Teneme en casa');
+/*alert ('Bienvenidos a Teneme en casa');
 
 do {
     let option = showMenu();
@@ -330,4 +330,84 @@ if(cart > 0) {
     alert(`El precio de tu compra es $${cart}. El precio final más IVA es $${finalPrice}.\n El precio final con envio es $${priceDelivery}`);
 }
 
-alert('¡Gracias por tu compra! Si querés ver los aumentos de precio \ny saber cuáles son los mas baratos mirá la consola')
+alert('¡Gracias por tu compra! Si querés ver los aumentos de precio \ny saber cuáles son los mas baratos mirá la consola');
+*/
+/******************************PRACTICA STORAGE Y JSON****************************************** */
+
+/*const productos = [{id: 1, producto: "Arroz", precio: 125},
+                {id: 2, producto: "Fideo", precio: 70},
+                {id: 3, producto: "Pan", precio: 50},
+                {id: 4, producto: "Flan", precio: 100}];
+
+const guardarLocal = (clave, valor)=> {localStorage.setItem(clave, valor)};
+
+for(const producto of productos) {
+    /*guardarLocal(producto.precio, JSON.stringify(producto));*/ //con este codigo recorro todo el objeto de productos y los almaceno uno por uno en el local storage
+    /*guardarLocal("listaProductos", JSON.stringify(productos)); // con este codigo recorro todo el objeto de productos y los almaceno todos juntos dentro de la "key" de listaProductos.
+        
+}*/
+
+
+/*class Producto {
+    constructor (id, nombre, precio) {
+        this.id = parseInt(id);
+        this.nombre = nombre;
+        this.precio = parseFloat(precio);
+    }
+}
+
+const producto1 = new Producto (1, "DONA", 60);
+
+localStorage.setItem("ejemploObjeto", producto1);
+localStorage.setItem("ejemploJSON", JSON.stringify(producto1)); // la seccion "application" imprime la key "ejemploJson" y el objeto convertido en texto JSON
+
+console.log(localStorage.getItem("ejemploJSON")); // consola imprime con formato texto JSON
+
+console.log(JSON.parse(localStorage.getItem("ejemploJSON"))); // consola imprime nuevamente con el texto JSON ya convertido a un objeto
+*/
+
+/*let myArrayOfNumber = [1, 2, 3, 4, 5];
+console.log(myArrayOfNumber);
+
+console.log(JSON.stringify(myArrayOfNumber));
+
+let myArrayJson = JSON.stringify(myArrayOfNumber);
+
+console.log(myArrayJson);
+
+
+console.log(JSON.parse(myArrayJson));
+
+let myArrayParse = JSON.parse(myArrayJson);
+
+console.log(myArrayParse);
+*/
+/***********************************FIN EJERCICIO LOCAL STORAGE**************** */
+
+const mainSection = document.querySelector('#container');
+let newDiv = document.createElement('div');
+let newH1 = document.createElement('h1');
+let newParagraph = document.createElement('p');
+
+mainSection.appendChild(newDiv); 
+newDiv.appendChild(newH1);
+newDiv.appendChild(newParagraph);
+
+newH1.innerHTML = "NUESTROS PRODUCTOS";
+newParagraph.innerHTML = "A continuacion te mostramos algunos de nuestros productos";
+newH1.classList.add('titulo')
+newParagraph.classList.add('subtituloProductos')
+
+const products = [{id: 1, name: 'Hamburguesa de carne', price: 300, stock: 20},
+                  {id: 2, name: 'Panchos', price:200, stock: 30},
+                  {id: 3, name: 'Papas fritas', price: 450, stock: 50},
+                  {id: 4, name: 'Nuggets de pollo', price: 400, stock: 40}];
+
+for (const product of products) {
+    let container = document.createElement('div');
+    container.classList.add('productos');
+    container.innerHTML = `<p>Id: ${product.id}</p>
+                          <p>Producto: ${product.name}</p>
+                          <p>Price: $${product.price}</p>`;  
+    newDiv.appendChild(container);
+}

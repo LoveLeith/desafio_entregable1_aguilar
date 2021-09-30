@@ -1,6 +1,6 @@
 /*Este archivo contiene las variables para hacer el desarrollo del futuro sitio Teneme en Casa*/
 
-const selectedQty = 'Indicá cuántas unidades querés comprar:';
+/*const selectedQty = 'Indicá cuántas unidades querés comprar:';
 
 let products = [
     {id: 1, name: 'Hamburguesa de carne', price: 300, stock: 20},
@@ -14,3 +14,5 @@ let cart = 0;
 let resp = 'S';
 
 let delivery = 500;
+*/
+
