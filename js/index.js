@@ -384,7 +384,8 @@ console.log(myArrayParse);
 */
 /***********************************FIN EJERCICIO LOCAL STORAGE**************** */
 
-const mainSection = document.querySelector('#container');
+/********************************DESAFIO DOM*************************************/
+/*const mainSection = document.querySelector('#container');
 let newDiv = document.createElement('div');
 let newH1 = document.createElement('h1');
 let newParagraph = document.createElement('p');
@@ -410,4 +411,90 @@ for (const product of products) {
                           <p>Producto: ${product.name}</p>
                           <p>Price: $${product.price}</p>`;  
     newDiv.appendChild(container);
+}*/
+
+/*************************************FIN DESAFIO DOM ***************************/
+
+/*********************************DESAFIO EVENTOS *******************************/
+
+//Tome el id del div y cree variables para agregar el título y subtítulo de Nuestros productos
+//también agregué clases a los elementos para poder modificarlos en CSS
+const mainSection = document.querySelector('#mainContainer');
+let newDiv = document.createElement('div');
+let newH1 = document.createElement('h1');
+let newParagraph = document.createElement('p');
+
+mainSection.appendChild(newDiv); 
+newDiv.appendChild(newH1);
+newDiv.appendChild(newParagraph);
+
+newH1.innerHTML = "NUESTROS PRODUCTOS";
+newParagraph.innerHTML = "Busca tus productos favoritos mediante este buscador:";
+newH1.classList.add('titulo')
+newParagraph.classList.add('subtituloProductos')
+
+
+const gridContainer = document.getElementById('js-gridContainer');
+const searchInput = document.getElementById('js-searchInput'); 
+const searchButton = document.getElementById('js-searchButton');
+
+
+//Esta función es para crear la plantilla sobre la que voy a crear las cards para luego iterarlas
+const htmlTemplate = (product) => {    
+    return `<div class="card">
+                <p class="card_name">${product.name}</p>
+                <p class="card_category">${product.category}</p>
+                <p class="card_quantity">${product.quantity}</p>
+                <p class="card_price">$${product.price}</p>
+            </div>`;
+}
+
+//Esta función es para iterar las cards a partir de la plantilla de la función anterior 
+//y poblar el contenedor con innerHTML o para avisar al usuario que el producto que busca no existe
+const renderHTML = (products, container) => {   
+    container.innerHTML = "";   
+
+    if (products.length > 0) {
+        for (const product of products) {      
+            const productInHTML = htmlTemplate(product); 
+            
+            container.innerHTML += productInHTML; 
+        }
+    }
+    else {
+        container.innerHTML = `<p class="container_message">El producto que estás buscando no existe.</p>`;
+    }  
+}
+
+renderHTML(products, gridContainer);  
+
+//Esta función es para mostrarle al usuario la lista de productos y filtrar según
+//lo que el usuario busque dentro de esa lista de productos
+const filterProducts = () => {  
+    const searchInputValue = searchInput.value; 
+
+    const filteredProducts = products.filter((product) => {   
+        const productNameLowerCase = product.name.toLowerCase();
+        const productCategoryLowerCase = product.category.toLowerCase();
+
+        const isFiltered =                                
+        productNameLowerCase.includes(searchInputValue.toLowerCase()) ||   
+        productCategoryLowerCase.includes(searchInputValue.toLowerCase());
+
+        return isFiltered;
+    });
+
+    renderHTML(filteredProducts, gridContainer); 
+};
+
+searchButton.addEventListener("click", filterProducts);
+
+//Esta es una función para validar el formulario antes de enviarlo al servidor y para 
+//evitar perder la información y así procesarla con JS
+let formularioContacto = document.getElementById('formulario');
+formularioContacto.addEventListener('submit', validarFormulario);
+
+function validarFormulario(e) {
+    e.preventDefault();
+    console.log('Formulario enviado');
 }

@@ -15,8 +15,53 @@
     <div class="tituloPagina">
         <h1>CURSO DE JAVASCRIPT</h1>
     </div>
-	
-	<section id = "container"> </section>
+	<div id="mainContainer"></div>
+
+    <div class="searchBar">
+        <input type="text" class="searchBar_input" id="js-searchInput"/>
+        <button class="searchBar_button" id="js-searchButton">Buscar</button>
+    </div>
+
+    <div class="container" id="js-gridContainer">
+        
+    </div>
+
+	<div class="tituloContactUs">
+        <h1>CONTACTANOS</h1>
+    </div>
+
+	<div class="containerContacto">
+	</div>
+		<!--inicio formulario de contacto-->
+		<form action="#" id = "formulario">
+
+			<input type="text" placeholder="Nombre y apellido" class="formatoFormulario">
+			<input type="telefono" placeholder="Teléfono" class="formatoFormulario">
+			<input type="email" placeholder="Correo electrónico" class="formatoFormulario">
+			<select name="temas" class="formatoFormulario">
+				<option value="horarios">Horarios</option>
+				<option value="envios">Envios</option>
+				<option value="reclamos">Reclamos</option>	
+			</select>
+			<textarea cols="30" rows="10" placeholder="Consulta" required class="formatoFormulario"></textarea>
+			<p class="textoFormulario">¿En qué horario preferís que te contactemos?</p>
+			<div class="botonesRadioCheckbox">
+				<label class="textoFormulario">Mañana <input type="radio" name="llamarSi" class="botonRadio"></label>
+				<label class="textoFormulario textoBotones">Mediodía <input type="radio" name="llamarSi"></label>
+				<label class="textoFormulario textoBotones">Tarde <input type="radio" name="llamarSi"></label>
+			</div>
+			<p class="textoFormulario">¿Te gustaría que te enviemos novedades de Teneme en Casa?</p>
+			<div class="botonesRadioCheckbox2">
+				<label class="textoFormulario textoBotones">Si <input type="radio" name="novedadesSi"></label>
+				<label class="textoFormulario textoBotones">No <input type="radio" name="novedadesSi"></label>
+			</div>
+			<div class="botonesForm">
+				<input type="submit" value="Enviar Consulta" class="boton">
+				<input type="reset" value="Borrar Todo" class="boton">
+			</div>		
+		</form>
+
+	</section>
 
 
 <script src="./js/variablesGenerales.js"></script>
