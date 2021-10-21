@@ -296,7 +296,7 @@ for (const product of products) {
 }
 
 
-const baratos = products.filter(product=>product.price < 300);
+const baratos = products.filter(product=>product.price <button 300);
 console.log(baratos);
 
 const caros = products.filter(product=>product.price > 95);
@@ -306,8 +306,8 @@ const precioAumentado = products.map(product=>product.price +=50);
 console.log(precioAumentado);*/
 
 /***************************PRIMERA ENTREGA PARCIAL***********************/
-/*Este archivo contiene el bucle del menu principal para que el usuario elija los productos que se muestran
-y los alert de salida para mostrar los resultados de la compra elegida */
+//Este archivo contiene el bucle del menu principal para que el usuario elija los productos que se muestran
+//y los alert de salida para mostrar los resultados de la compra elegida */
 
 
 /*alert ('Bienvenidos a Teneme en casa');
@@ -330,8 +330,8 @@ if(cart > 0) {
     alert(`El precio de tu compra es $${cart}. El precio final más IVA es $${finalPrice}.\n El precio final con envio es $${priceDelivery}`);
 }
 
-alert('¡Gracias por tu compra! Si querés ver los aumentos de precio \ny saber cuáles son los mas baratos mirá la consola');
-*/
+alert('¡Gracias por tu compra! Si querés ver los aumentos de precio \ny saber cuáles son los mas baratos mirá la consola');*/
+
 /******************************PRACTICA STORAGE Y JSON****************************************** */
 
 /*const productos = [{id: 1, producto: "Arroz", precio: 125},
@@ -419,7 +419,7 @@ for (const product of products) {
 
 //Tome el id del div y cree variables para agregar el título y subtítulo de Nuestros productos
 //también agregué clases a los elementos para poder modificarlos en CSS
-const mainSection = document.querySelector('#mainContainer');
+/*const mainSection = document.querySelector('#mainContainer');
 let newDiv = document.createElement('div');
 let newH1 = document.createElement('h1');
 let newParagraph = document.createElement('p');
@@ -487,14 +487,171 @@ const filterProducts = () => {
     renderHTML(filteredProducts, gridContainer); 
 };
 
-searchButton.addEventListener("click", filterProducts);
+searchButton.addEventListener("click", filterProducts);*/
 
 //Esta es una función para validar el formulario antes de enviarlo al servidor y para 
 //evitar perder la información y así procesarla con JS
-let formularioContacto = document.getElementById('formulario');
+/*let formularioContacto = document.getElementById('formulario');
 formularioContacto.addEventListener('submit', validarFormulario);
 
 function validarFormulario(e) {
     e.preventDefault();
     console.log('Formulario enviado');
+}*/
+
+/**************************JQUERY*************************/
+/*let titulo = document.getElementById('hache');
+let tituloJQ = $('#hache');
+
+//console.log(titulo);
+//console.log(tituloJQ[0].innerHTML);
+
+let paises = document.getElementsByClassName('paises');
+let paisesJQ = $('.paises');
+//console.log(paises);
+//console.log(paisesJQ);
+
+let items = document.getElementsByTagName('li');
+//let itemsJQ = $('li'); // como es un tag no necesito especificar si es clase o id
+//console.log(items);
+//console.log(itemsJQ);
+
+
+let itemsJQ = $('li:nth-child(3)'); // al poner :last me muestra el ultimo tag "li"
+for (const items of itemsJQ) {
+    console.log(items.innerHTML);
+}*/
+
+
+//Agregamos un botón y un div con jQuery
+
+/*$('#boton').prepend('<button id="btn1">Fecha de hoy</button>');
+$('#boton').prepend(`<div id="div1" style height: "120px">
+                    <h3>Hoy es martes 12 de octubre</h3>
+                    <h4>2021</h4>
+                    </div>`);
+
+$("#btn1").click(() => {
+    $("#div1").slideDown();
+});*/
+
+
+/*$('#boton').prepend('<button id="btn1">Fecha de hoy</button>');
+$('#boton').prepend(`<div id="div1">
+                        <h3>Hoy es martes 12 de octubre</h3>
+                        <h4>2021</h4>
+                    </div>`);
+
+$("#btn1").click(() => {
+    $("#div1").slideDown();
+});*/
+
+
+
+
+/*$("body").prepend('<button id="btn1">Mostrar</button>');
+$("body").prepend(`<div id="div1" style="height: 120px">
+ <h3>¡Hola Coder!</h3>
+ <h4>Sorpresa 2</h4>
+ </div>`);
+
+ $("#btn1").click(() => {
+    $("#div1").slideDown("fast");
+   });*/
+
+
+   /*class tienda {
+    constructor(id, name, price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.comprarTienda = function (valor) {
+            return 'Nombre: ' + this.name + ' \n Precio: $' + this.price;
+        };
+    }
 }
+const comidas=[
+    { id: 1, name: 'hamburguesa de carne', price: 300 } ,
+    { id: 2, name: 'Papas fritas clásicas', price: 450},
+    { id: 3, name: 'Helado de vainilla', price: 500 },
+    { id: 4, name: 'Empanadas de carne', price: 900 },
+];
+
+const carrito = [];
+
+const contenedorMaestro = document.getElementById("cardsComida");
+
+for (const Tienda of comidas) {
+    let divProducto = document.createElement('div');
+    divProducto.innerHTML = `<div>
+                                <div class="card-body">
+                                    <img src="../assets/images/hamburguesas_seccion_productos_72dpi.jpg" class="card-img-top" alt="">
+                                    <h5 class="card-text">${Tienda.name}</h5>
+                                    <p class="card-text"> Precio: $ ${Tienda.price}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#" id=' ${Tienda.id} ' class="btn btn-sm btn-outline-secondary btnBUY">BUY</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>`;
+
+contenedorMaestro.appendChild(divProducto);
+}
+
+let botonBuy= JQuery(".btnBUY");
+
+for (const boton of botonBuy) {
+    boton.onclick = comprarTienda;
+
+}
+
+function comprarTienda(event) {
+    event.preventDefault();
+
+    let encontrado=comidas.find(Tienda => Tienda.id == event.target.id);
+    localStorage.setItem('idProducto', JSON.stringify(encontrado));
+
+    carrito.push(encontrado);
+    carritoComida(carrito);
+
+}
+
+function carritoComida(carrito) {
+    jQuery("#carritoCantidad").html(carrito.length);
+    jQuery("#carritoProducto").empty();
+
+
+    for (const Tienda of carrito) {
+        jQuery("#carritoProducto").append(`<p> ${Tienda.name}   </p>
+                                    <p> Precio: ${Tienda.price}  </p>
+                                    `);
+        
+    }
+}*/
+
+const librosUno = [
+    {nombre: 'El Capital', autor: 'Karl Marx'},
+    {nombre: 'La Riqueza de las Naciones', autor: 'Adam Smith'},
+    {nombre: 'Nada Sera Igual', autor: 'Martin Tetaz'},
+    {nombre: 'Keynes vs Hayek', autor: 'Nicholas Wapshott'},
+    {nombre: 'Repensar la Pobreza', autor: 'Esther Duflo'},
+    {nombre: 'Buffettologia', autor: 'Mary Buffett'},
+    {nombre: 'Economia 3D', autor: 'Martin Losteau'},
+    {nombre: 'Pensar Rapido Pensar Despacio', autor: 'Daniel Kahneman'},
+    {nombre: 'Papel Pintado', autor: 'Diego Giacomini'},
+];
+
+librosUno.sort((a, b) => {
+   const autorA = a.autor.toLowerCase();
+   const autorB = a.autor.toLowerCase();
+    if (a.autor < b.autor) {
+        return -1;
+    }
+    if (a.autor > b.autor) {
+        return 1;
+    }
+    return 0;
+});
+
+console.log(librosUno);

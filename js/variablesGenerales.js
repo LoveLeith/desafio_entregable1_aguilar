@@ -1,4 +1,4 @@
-/*Este archivo contiene las variables para hacer el desarrollo del futuro sitio Teneme en Casa*/
+//Este archivo contiene las variables para hacer el desarrollo del futuro sitio Teneme en Casa*/
 
 /*const selectedQty = 'Indicá cuántas unidades querés comprar:';
 
@@ -13,13 +13,13 @@ let cart = 0;
 
 let resp = 'S';
 
-let delivery = 500;
-*/
+let delivery = 500;*/
 
-/***********************************DESAFIO DOM - VARIABLES************************/
+
+/***********************************DESAFIO DOM y EVENTOS - VARIABLES************************/
 
 //Este es el array a partir del cual se van a crear las cards para que se vean en el HTML
-const products = [
+/*const products = [
     {
         name: "Hamburguesa de carne",
         category: "Hamburguesas",
@@ -80,5 +80,5 @@ const products = [
         quantity: "Docena",
         price: 400
     }
-];
-/***********************************DESAFIO DOM - VARIABLES************************/
+];*/
+/***********************************DESAFIO DOM Y EVENTOS - VARIABLES************************/
